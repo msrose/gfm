@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 input_file = ARGV[0]
 
 if input_file.nil? || ARGV.include?('--help') || ARGV.include?('-h')
