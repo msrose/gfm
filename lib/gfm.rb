@@ -29,7 +29,7 @@ HELP
 
   def self.stylesheet_tags
     HTTPClient.new.get("https://github.com").body.split("\n").select do |line|
-      line=~/https:.*github.*\.css/
+      line =~ /https:.*github.*\.css/
     end.join
   end
 end

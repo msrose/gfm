@@ -8,7 +8,9 @@ input_file, output_file = ARGV
 if input_file.nil? || ARGV.include?('--help') || ARGV.include?('-h')
   puts GFM::HELP_TEXT
 elsif input_file.end_with?(".md") && File.exists?(input_file)
-  GFM::Converter.new(input_file).write_output_file(output_file)
+  converter = GFM::Converter.new(input_file)
+  converter.write_output_file(output_file)
+  puts "Markdown from #{converter.input_file_name} written to #{converter.output_file_name}."
 else
   puts "Invalid markdown file #{input_file}"
 end

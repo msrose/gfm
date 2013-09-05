@@ -1,11 +1,15 @@
 module GFM
   class Converter
-    def initialize(input_file_name)
-      @input_file_name = input_file_name
+    attr_reader :input_file_name
+    attr_reader :output_file_name
+
+    def initialize(filename)
+      @input_file_name = filename
     end
 
     def write_output_file(filename = nil)
-      File.open(sanitized_output_file_name(filename), 'w').write(html_content)
+      @output_file_name = sanitized_output_file_name(filename)
+      File.open(@output_file_name, 'w').write(html_content)
     end
 
     private
