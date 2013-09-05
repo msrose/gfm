@@ -32,14 +32,14 @@ elsif input_file.end_with?(".md") && File.exists?(input_file)
   end.join
 
   output_file_name = ARGV[1].present? ? (ARGV[1].end_with?('.html') ? ARGV[1] : ARGV[1] + '.html') : nil
-  output_file = File.open(output_file_name || ARGV[0].gsub('md', 'html'), 'w')
+  output_file = File.open(output_file_name || input_file.gsub('md', 'html'), 'w')
 
-  html_opening_tags = "<html><head><title>#{ARGV[0]}</title>"
+  html_opening_tags = "<html><head><title>#{input_file}</title>"
   body_tags = "</head><body><div id='readme' style='width:914px;margin:20px auto'><article class='markdown-body'>"
-  body_content = pipeline.call(File.new(ARGV[0]).readlines.join)[:output].to_s
+  body_content = pipeline.call(File.new(input_file).readlines.join)[:output].to_s
   html_closing_tags = '</article></div></body></html>'
 
   output_file.write(html_opening_tags + stylesheet_tags + body_tags + body_content + html_closing_tags)
 else
-  puts "Invalid markdown file #{ARGV[0]}"
+  puts "Invalid markdown file #{input_file}"
 end
