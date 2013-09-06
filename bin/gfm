@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
 require 'gfm'
-require 'gfm/converter'
 
 input_file, output_file = ARGV
 
 if input_file.nil? || ARGV.include?('--help') || ARGV.include?('-h')
   puts GFM::HELP_TEXT
+elsif ARGV.include?('--version') || ARGV.include?('-v')
+  puts "Version #{GFM::VERSION}"
 elsif input_file.end_with?(".md") && File.exists?(input_file)
   converter = GFM::Converter.new(input_file)
   converter.write_output_file(output_file)

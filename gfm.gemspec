@@ -1,6 +1,8 @@
+require File.expand_path('../lib/gfm/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.name = 'gfm'
-  s.version = '0.1.4'
+  s.version = GFM::VERSION
   s.date = '2013-09-04'
   s.summary = 'GitHub Flavoured Markdown Previewer'
   s.description = 'Generates an HTML file from a GitHub Flavored Markdown file. Useful for previewing README files.'

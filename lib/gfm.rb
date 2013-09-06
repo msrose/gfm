@@ -2,10 +2,11 @@ module GFM
   require 'html/pipeline'
   require 'httpclient'
   require 'linguist'
+  require 'gfm/converter'
+  require 'gfm/version'
 
   HELP_TEXT = <<HELP
-Usage:
-  gfm INPUT_FILE.md [OUTPUT_FILE] [--help, -h]
+Usage: gfm INPUT_FILE.md [OUTPUT_FILE] [options]
 
   INPUT_FILE.md   The markdown file to be parsed with GitHub Flavored Markdown.
 
@@ -13,6 +14,8 @@ Usage:
                   INPUT_FILE.html is used.
 
   --help, -h      Display this help message.
+
+  --version, -v   Display the version number.
 HELP
 
   def self.pipeline
