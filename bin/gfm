@@ -2,11 +2,17 @@
 
 require 'gfm'
 
+class Array
+  def has_switch?(long_form, short_form = long_form[1..2])
+    self.include?(long_form) || self.include?(short_form)
+  end
+end
+
 input_file, output_file = ARGV
 
-if input_file.nil? || ARGV.include?('--help') || ARGV.include?('-h')
+if input_file.nil? || ARGV.has_switch?('--help')
   puts GFM::HELP_TEXT
-elsif ARGV.include?('--version') || ARGV.include?('-v')
+elsif ARGV.has_switch?('--version')
   puts "Version #{GFM::VERSION}"
 elsif input_file.end_with?(".md") && File.exists?(input_file)
   converter = GFM::Converter.new(input_file)
