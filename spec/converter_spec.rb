@@ -1,4 +1,4 @@
-require File.expand_path('../spec_helper', __FILE__)
+require 'spec_helper'
 
 describe GFM::Converter do
   before { @converter = GFM::Converter.new('tmp/README.md') }
