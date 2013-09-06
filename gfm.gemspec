@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'html-pipeline'
   s.add_runtime_dependency 'github-linguist'
   s.add_runtime_dependency 'httpclient'
+  s.add_development_dependency 'rspec'
 end
