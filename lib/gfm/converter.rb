@@ -18,10 +18,9 @@ module GFM
         if filename.present?
           filename.end_with?('.html') ? filename : filename + '.html'
         else
-          @input_file_name.gsub('md', 'html')
+          @input_file_name.gsub(/\.md$/, '.html')
         end
       end
-
 
       def html_content
         %Q{
