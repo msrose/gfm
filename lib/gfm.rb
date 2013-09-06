@@ -1,7 +1,8 @@
+require 'html/pipeline'
+require 'httpclient'
+require 'linguist'
+
 module GFM
-  require 'html/pipeline'
-  require 'httpclient'
-  require 'linguist'
   require 'gfm/converter'
   require 'gfm/version'
 
