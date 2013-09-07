@@ -1,6 +1,6 @@
 # GFM Preview
 
-This gem take a markdown file and parses it with [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown). The generated HTML file gives a preview of the file as it would appear on GitHub. This is useful for checking the format of README.md files before pushing to your remote repository.
+This gem takes a markdown file and parses it with [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown). The generated HTML file gives a preview of the file as it would appear on GitHub. This is useful for checking the format of README.md files before pushing to your remote repository.
 
 ## Installation
 
@@ -18,13 +18,13 @@ $ gfm README.md
 
 This generates a file named `README.html`, which will give a preview of the README as it would appear on GitHub.
 
-To use a name for output other than the name of the current file:
+To use a name for the HTML file other than the name of the current file:
 
 ```Shell
 $ gfm README.md output
 ```
 
-This will generate a file name `output.html`.
+This will generate a file named `output.html`.
 
 ## Acknowledgements
 
