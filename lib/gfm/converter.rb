@@ -4,6 +4,8 @@ module GFM
     attr_reader :output_file_name
 
     def initialize(filename)
+      raise "invalid markdown file #{filename}" unless filename.end_with?('.md')
+      raise "no such file #{filename}" unless File.exist?(filename)
       @input_file_name = filename
     end
 

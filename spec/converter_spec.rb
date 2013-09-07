@@ -3,6 +3,16 @@ require 'spec_helper'
 describe GFM::Converter do
   before { @converter = GFM::Converter.new('tmp/README.md') }
 
+  describe "creating an instance without a proper file" do
+    it "throws and error if the file is not a markdown file" do
+      expect { GFM::Converter.new("blah blah not a markdown file") }.to raise_error
+    end
+
+    it "throws and error if the file does not exist" do
+      expect { GFM::Converter.new("non_existent_file.md") }.to raise_error
+    end
+  end
+
   describe "#input_file_name" do
     it "sets the correct input file name" do
       @converter.input_file_name.should == 'tmp/README.md'
