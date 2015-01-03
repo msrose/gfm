@@ -1,6 +1,6 @@
 # GFM Preview
 
-[![gfm API Documentation](https://www.omniref.com/ruby/gems/gfm.png)](https://www.omniref.com/ruby/gems/gfm)
+[![gfm API Documentation](https://dqvhmzwrjy66y.cloudfront.net/assets/badge-d08eb706b0adfe1d16fe2ca9c1e49cbc.png)](https://www.omniref.com/ruby/gems/gfm)
 
 This gem takes a markdown file and parses it with [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown). The generated HTML file gives a preview of the file as it would appear on GitHub. This is useful for checking the format of README.md files before pushing to your remote repository.
 
