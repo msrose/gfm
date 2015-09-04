@@ -1,3 +1,6 @@
 *.gem
 *.html
 tmp/*
+*.swp
+*.swo
+Gemfile.lock

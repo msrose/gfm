@@ -27,8 +27,12 @@ HELP
       HTML::Pipeline::ImageMaxWidthFilter,
       HTML::Pipeline::HttpsFilter,
       HTML::Pipeline::MentionFilter,
-      HTML::Pipeline::SyntaxHighlightFilter
-    ]
+      HTML::Pipeline::SyntaxHighlightFilter,
+      HTML::Pipeline::EmojiFilter
+    ],
+    http_url: 'http://github.com',
+    asset_root: 'https://assets-cdn.github.com/images/icons'
+
   end
 
   def self.stylesheet_tags
