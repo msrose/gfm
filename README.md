@@ -12,6 +12,13 @@ Install with RubyGems:
 $ gem install gfm
 ```
 
+You may need to install `libicu-dev` and `cmake` first. For Ubuntu:
+
+```
+$ sudo apt-get install libicu-dev
+$ sudo apt-get install cmake
+```
+
 ## Usage
 
 ```
